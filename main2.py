@@ -3,37 +3,48 @@ import os
 
 app = Flask(__name__)
 
+# Badhe j sthale "GT OFFICER 01" kari didhu chhe
 html_design = """
 <!DOCTYPE html>
 <html lang="gu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GT OFFICIAL 08 - Premium</title>
+    <title>GT OFFICER 01</title>
     <style>
-        body { background: linear-gradient(135deg, #0c0c0e 0%, #1a1a1c 100%); color: white; font-family: 'Segoe UI', sans-serif; text-align: center; padding: 20px; min-height: 100vh; }
+        body { 
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://i.imgur.com/vH9Jj8v.jpeg'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white; 
+            font-family: 'Segoe UI', sans-serif; 
+            text-align: center; 
+            padding: 20px; 
+            min-height: 100vh; 
+        }
         .container { max-width: 500px; margin: auto; }
-        .box { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); padding: 25px; border-radius: 20px; margin-bottom: 20px; text-align: left; box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8); }
-        .btn { background: linear-gradient(45deg, #ff1e27, #ff6b6b); color: white; padding: 15px; border: none; cursor: pointer; border-radius: 50px; font-weight: bold; width: 100%; margin-top: 20px; transition: 0.3s; box-shadow: 0 4px 15px rgba(255, 30, 39, 0.4); }
-        .btn:hover { transform: scale(1.02); box-shadow: 0 6px 20px rgba(255, 30, 39, 0.6); }
-        input, select { width: 100%; padding: 14px; margin: 10px 0; border-radius: 12px; border: 1px solid #444; background: rgba(0,0,0,0.3); color: white; box-sizing: border-box; }
-        .rule-list { list-style-type: none; padding-left: 0; color: #eee; }
-        .rule-list li { margin: 10px 0; padding-left: 25px; position: relative; }
-        .rule-list li::before { content: '✓'; color: #ff1e27; position: absolute; left: 0; font-weight: bold; }
+        .box { background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(10px); border: 2px solid #ffd700; padding: 25px; border-radius: 20px; margin-bottom: 20px; text-align: left; }
+        .btn { background: linear-gradient(45deg, #ffd700, #ff8c00); color: black; padding: 15px; border: none; cursor: pointer; border-radius: 50px; font-weight: bold; width: 100%; margin-top: 20px; transition: 0.3s; }
+        .btn:hover { transform: scale(1.05); }
+        input, select { width: 100%; padding: 14px; margin: 10px 0; border-radius: 12px; border: 1px solid #ffd700; background: rgba(0,0,0,0.5); color: white; box-sizing: border-box; }
+        .rule-list { list-style-type: none; padding-left: 0; }
+        .rule-list li { margin: 10px 0; padding-left: 25px; position: relative; color: #ffcc00; }
+        .rule-list li::before { content: '🦁'; position: absolute; left: 0; }
         .hidden { display: none; }
-        h1 { background: linear-gradient(to right, #ff1e27, #fff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        h1 { color: #ffd700; text-shadow: 2px 2px 10px #000; }
     </style>
 </head>
 <body>
     <div class="container">
         <div id="welcome_screen">
-            <h1 style="margin-top: 100px;">WELCOME<br>GT OFFICIAL 08</h1>
+            <h1 style="margin-top: 50px;">WELCOME<br>GT OFFICER 01</h1>
             <button class="btn" onclick="showRules()">ENTER NOW</button>
         </div>
 
         <div id="main_content" class="hidden">
             <div class="box">
-                <h3 style="color: #ff1e27; text-align: center; margin-bottom: 20px;">🎯 ગિલ્ડના નિયમો</h3>
+                <h3 style="color: #ffd700; text-align: center;">🎯 ગિલ્ડના નિયમો</h3>
                 <ul class="rule-list">
                     <li>Player daily online</li>
                     <li>Gujrati player only</li>
@@ -45,7 +56,7 @@ html_design = """
             </div>
 
             <div class="box">
-                <h2 style="text-align: center;">📝 Join Form</h2>
+                <h2 style="text-align: center; color: #ffd700;">📝 Join Form</h2>
                 <label>🎮 FREE FIRE U_ID:</label>
                 <input type="text" id="ff_uid" placeholder="UID લખો">
                 <label>💬 INSTAGRAM/WHATSAPP:</label>
@@ -70,7 +81,7 @@ html_design = """
             var contact = document.getElementById("contact_info").value;
             var adminNumber = document.getElementById("admin_select").value;
             if(uid == "" || contact == "") { alert("બધી વિગતો ભરો!"); return; }
-            var message = "🔥 *GT OFFICER GUILD JOIN REQUEST* 🔥\\n\\n🎮 *UID:* " + uid + "\\n💬 *Name/Contact:* " + contact;
+            var message = "🔥 *GT OFFICER 01 GUILD JOIN REQUEST* 🔥\\n\\n🎮 *UID:* " + uid + "\\n💬 *Name/Contact:* " + contact;
             window.location.href = "https://wa.me/" + adminNumber + "?text=" + encodeURIComponent(message);
         }
     </script>
